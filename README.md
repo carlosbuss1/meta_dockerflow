@@ -92,7 +92,8 @@ docker rm -f taxo_output 2>/dev/null || true
 
 ### **Step 2: Build the Docker Image**
 
-Build the Docker image using the provided `Dockerfile`. This creates a reproducible environment for running the pipeline.
+Build the Docker image using the provided `Dockerfile`. This creates a reproducible
+environment for running the pipeline.
 
 ```bash
 docker build -t taxonomic_analysis .
@@ -101,7 +102,8 @@ docker build -t taxonomic_analysis .
 
 ## Step 3: Run the Container
 
-Run the analysis pipeline inside the container. Do **not** use the `--rm` flag here, as the container must persist temporarily for file extraction.
+Run the analysis pipeline inside the container. Do **not** use the `--rm` flag here, as the
+container must persist temporarily for file extraction.
 
 ```bash
 docker run --name taxo_output taxonomic_analysis
@@ -110,7 +112,8 @@ docker run --name taxo_output taxonomic_analysis
 
 ## Step 4: Copy the Output Files to the Host Machine
 
-After the pipeline completes, copy the generated results from the container’s `/app/output` directory to a local `output/` folder on the host machine.
+After the pipeline completes, copy the generated results from the container’s `/app/output` directory
+ to a local `output/` folder on the host machine.
 
 ```bash
 docker cp taxo_output:/app/output ./output
@@ -151,7 +154,8 @@ After running the pipeline, the following files will be available in the `output
 
 ### 1. **Host Directory Permission Issues**
 
-If you face permission errors when mounting a directory, avoid mounting the volume and instead copy the results using the `docker cp` command as shown above.
+If you face permission errors when mounting a directory, avoid mounting the volume and instead copy the
+results using the `docker cp` command as shown above.
 
 ---
 
