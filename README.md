@@ -43,11 +43,14 @@ This repository provides a Python-based pipeline to analyze taxonomic data, calc
    - `summary_statistics.csv`: Table with total and average species count per phylum.  
    - `total_species_count_chart.png`: Bar chart visualization.
 
-- **Docker Environment**: Pre-configured container for running the pipeline without dependency issues, including solutions for host permission problems.
+- **Docker Environment**: Pre-configured container for running the pipeline without
+- dependency issues, including solutions for host permission problems.
 
-- **Sample Dataset**: A sample input file (`taxonomic_data.csv`) for testing the pipeline functionality.
+- **Sample Dataset**: A sample input file (`taxonomic_data.csv`) for testing the
+- pipeline functionality.
 
-- **Comprehensive Documentation**: This README and in-script comments to guide users through usage and customization.
+- **Comprehensive Documentation**: This README and in-script comments to guide users
+- through usage and customization.
 
 ---
 
