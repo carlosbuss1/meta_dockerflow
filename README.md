@@ -72,49 +72,64 @@ The following Python libraries are pre-installed and configured inside the Docke
 
 ## Usage
 
-### 1. **Clone the Repository**
+## Full Workflow Sequence
 
-Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/carlosbuss1/meta_dockerflow.git
-cd meta_dockerflow
+Follow these steps to run the taxonomic analysis pipeline, retrieve the results, and clean up the environment.
 
 ---
 
-### 2. **Build the Docker Image**
+## Step 1: Remove Any Conflicting Container
 
-Build the Docker image using the `Dockerfile`:
+Ensure no previous container with the same name exists before running the pipeline.
+
+```bash
+docker rm -f taxo_output 2>/dev/null || true
+
+---
+
+### **Step 2: Build the Docker Image**
+
+Build the Docker image using the provided `Dockerfile`. This creates a reproducible environment for running the pipeline.
 
 ```bash
 docker build -t taxonomic_analysis .
 
 ---
 
-### 3. **Run the Pipeline**
+## Step 3: Run the Container
 
-Run the container to execute the taxonomic analysis:
+Run the analysis pipeline inside the container. Do **not** use the `--rm` flag here, as the container must persist temporarily for file extraction.
 
 ```bash
 docker run --name taxo_output taxonomic_analysis
 
 ---
 
-### 4. **Retrieve the Output Files**
+## Step 4: Copy the Output Files to the Host Machine
 
-Once the container has finished running, copy the output files to your local `output/` directory:
+After the pipeline completes, copy the generated results from the container’s `/app/output` directory to a local `output/` folder on the host machine.
 
 ```bash
 docker cp taxo_output:/app/output ./output
 
 ---
 
-### 5. **Clean Up**
+## Step 5: Clean Up - Remove the Container After Copying Files
 
-After retrieving the results, remove the container to free up resources:
+Once the results have been extracted, remove the container to free up resources.
 
 ```bash
 docker rm taxo_output
+
+---
+
+## Step 6: Verify Output Files
+
+List the contents of the `output/` directory to verify that the results have been successfully copied.
+
+```bash
+echo "Output files:"
+ls -lh output/
 
 ---
 
