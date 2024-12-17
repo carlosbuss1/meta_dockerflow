@@ -73,6 +73,36 @@ The following Python libraries are pre-installed and configured inside the Docke
 
 ---
 
+## Summarized Workflow
+
+Follow these steps to run the taxonomic analysis pipeline and retrieve the results:
+
+```bash
+# Step 1: Clone the Repository
+git clone https://github.com/carlosbuss1/meta_dockerflow.git
+cd meta_dockerflow
+
+# Step 2: Remove Any Conflicting Container
+docker rm -f taxo_output 2>/dev/null || true
+
+# Step 3: Build the Docker Image
+docker build -t taxonomic_analysis .
+
+# Step 4: Run the Container
+docker run --name taxo_output taxonomic_analysis
+
+# Step 5: Copy the Output Files
+docker cp taxo_output:/app/output ./output
+
+# Step 6: Clean Up
+docker rm taxo_output
+
+# Step 7: Verify the Output
+echo "Output files:"
+ls -lh output/
+
+---
+
 ## Usage
 
 ## Full Workflow Sequence
@@ -168,33 +198,6 @@ docker build -t taxonomic_analysis .
 
 ---
 
-## Summarized Workflow
-
-```bash
-# Clone repository
-git clone https://github.com/carlosbuss1/meta_dockerflow.git
-cd meta_dockerflow
-
-# Build the image
-docker build -t taxonomic_analysis .
-
-# Run the analysis
-docker run --name taxo_output taxonomic_analysis
-
-# Retrieve the output files
-docker cp taxo_output:/app/output ./output
-
-# Remove the container
-docker rm taxo_output
-
----
-
 ## Contact
 
 For questions or issues, please open a GitHub issue or contact me via [carlosbuss1](https://github.com/carlosbuss1).
-
-
-
-
-
-
