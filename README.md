@@ -1,6 +1,6 @@
 # Taxonomic Analysis Pipeline Overview
 
-This repository provides a Python-based pipeline to analyze taxonomic data, calculate summary statistics, and generate visualizations. It is containerized using Docker for reproducibility, ensuring consistent results across different environments. The pipeline includes a sample dataset (`taxonomic_data.csv`) for testing and supports user-defined taxonomic data.
+This repository provides a Python-based pipeline to analyze taxonomic data, calculate summary statistics, and generate visualizations. It is containerized using Docker for reproducibility, ensuring consistent results across different environments. The pipeline includes a sample dataset (`taxonomic_data.csv`) for testing and supports user-defined taxonomic dataset.
 
 ---
 
