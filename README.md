@@ -1,6 +1,6 @@
 # Meta DockerFlow: Taxonomic Analysis Pipeline with Cross-Platform Reproducibility
 
-## 🎯 Project Mission
+## Project Mission
 
 This repository demonstrates **Docker-based computational reproducibility** for taxonomic data analysis across heterogeneous computing environments. The primary goal is to ensure that taxonomic analysis workflows produce **identical results** regardless of the host operating system, hardware configuration, or local software dependencies. This project serves as a reference implementation for containerized bioinformatics pipelines, addressing common reproducibility challenges in computational biology.
 
@@ -9,7 +9,7 @@ This repository demonstrates **Docker-based computational reproducibility** for 
 
 ---
 
-## 🔬 Scientific Context
+## Scientific Context
 
 ### The Reproducibility Challenge
 
@@ -31,7 +31,7 @@ This pipeline implements a **fully containerized workflow** that:
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 | Feature | Description | Reproducibility Benefit |
 |---------|-------------|------------------------|
@@ -44,7 +44,7 @@ This pipeline implements a **fully containerized workflow** that:
 
 ---
 
-## 📊 Pipeline Components
+## Pipeline Components
 
 ### Analysis Tasks Performed
 
@@ -70,7 +70,7 @@ This pipeline implements a **fully containerized workflow** that:
 
 ---
 
-## 🏗️ Repository Structure
+## Repository Structure
 
 ```
 meta_dockerflow/
@@ -88,7 +88,7 @@ meta_dockerflow/
 
 ---
 
-## 🔧 Technical Requirements
+##  Technical Requirements
 
 ### Host System Prerequisites
 
@@ -117,7 +117,7 @@ RUN pip install --no-cache-dir \
 
 ---
 
-## 🎮 Quick Start Guide
+##  Quick Start Guide
 
 ### One-Line Execution
 
@@ -151,7 +151,7 @@ ls -la output/
 
 ---
 
-## 🔬 Reproducibility Validation
+## Reproducibility Validation
 
 ### Verifying Consistent Results
 
@@ -180,7 +180,7 @@ diff <(docker exec test_amd64 cat /app/output/summary_statistics.csv) \
 
 ---
 
-## 🐛 Troubleshooting Guide
+## Troubleshooting Guide
 
 ### Common Issues and Solutions
 
@@ -218,7 +218,7 @@ docker build --no-cache -t taxonomic_analysis .
 
 ---
 
-## 📈 Performance Benchmarks
+##  Performance Benchmarks
 
 | Environment | Build Time | Execution Time | Output Size |
 |-------------|------------|----------------|-------------|
@@ -231,7 +231,7 @@ docker build --no-cache -t taxonomic_analysis .
 
 ---
 
-## 🧪 Extending the Pipeline
+##  Extending the Pipeline
 
 ### Adding New Analysis Functions
 
@@ -256,7 +256,7 @@ RUN pip install --no-cache-dir \
 
 ---
 
-## 📝 Best Practices for Reproducibility
+##  Best Practices for Reproducibility
 
 1. **Always pin package versions** in requirements.txt
 2. **Use specific base image tags** (avoid `:latest`)
@@ -268,7 +268,7 @@ RUN pip install --no-cache-dir \
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions that enhance reproducibility:
 
@@ -287,7 +287,7 @@ We welcome contributions that enhance reproducibility:
 
 ---
 
-## 📚 Citation
+##  Citation
 
 ```bibtex
 @software{buss2025metadockerflow,
@@ -301,13 +301,13 @@ We welcome contributions that enhance reproducibility:
 
 ---
 
-## 📜 License
+##  License
 
 MIT License - See [LICENSE](LICENSE) file for details
 
 ---
 
-## 👨‍🔬 Author
+##  Author
 
 **Carlos E. Buss, PhD**  
 Bioinformatics Researcher  
@@ -315,14 +315,14 @@ Signal Transduction and Metabolism Laboratory
 Université libre de Bruxelles (ULB)  
 Brussels, Belgium  
 
-📧 Email: carlos.eduardo.buss@ulb.be  
-🌐 Lab: [www.stmlaboratory.com](https://www.stmlaboratory.com)  
-💻 GitHub: [@carlosbuss1](https://github.com/carlosbuss1)  
-🐳 Docker Hub: [carlosbuss/taxonomic-analysis](https://hub.docker.com/r/carlosbuss/taxonomic-analysis)
+ Email: carlos.eduardo.buss@ulb.be  
+ Lab: [www.stmlaboratory.com](https://www.stmlaboratory.com)  
+ GitHub: [@carlosbuss1](https://github.com/carlosbuss1)  
+ Docker Hub: [carlosbuss/taxonomic-analysis](https://hub.docker.com/r/carlosbuss/taxonomic-analysis)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Docker Inc. for containerization technology
 - The bioinformatics community for reproducibility standards
@@ -331,7 +331,7 @@ Brussels, Belgium
 
 ---
 
-## 📊 Project Status
+##  Project Status
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Docker Version](https://img.shields.io/badge/docker-20.10%2B-blue)
