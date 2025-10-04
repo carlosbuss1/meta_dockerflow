@@ -4,9 +4,6 @@
 
 This repository demonstrates **Docker-based computational reproducibility** for taxonomic data analysis across heterogeneous computing environments. The primary goal is to ensure that taxonomic analysis workflows produce **identical results** regardless of the host operating system, hardware configuration, or local software dependencies. This project serves as a reference implementation for containerized bioinformatics pipelines, addressing common reproducibility challenges in computational biology.
 
-![Docker Reproducibility Workflow](docker_reproducibility.png)
-*Figure: Ensuring consistent taxonomic analysis across Windows, macOS, and Linux environments*
-
 ---
 
 ## Scientific Context
